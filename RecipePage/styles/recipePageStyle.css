@@ -1,0 +1,146 @@
+body {
+  font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.navanchor-Heading {
+    color: #ffffff;
+    float: left;
+    height: 45px;
+    padding: 15px 15px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.navanchor {
+    color: #ffffff;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 17px;
+    line-height: 20px;
+}
+label {
+  font-weight: normal;
+}
+#recipeInfo{
+  width: 100%;
+  height: 400px;
+  padding-top: 50px;
+  position: relative;
+  padding-top: 50px;
+  vertical-align: middle;
+}
+#recipeImgContainer{
+  padding-top: 100px;
+  padding-bottom: 0px;
+  width: 330px;
+  height: 400px;
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+}
+#recipeImg {
+  width: 98%;
+  height: 98%;
+}
+#recipeDataContainer {
+  width:100%;
+  height: 100%;
+  position: relative;
+  text-align: left;
+  padding-top: 0px;
+}
+#recipeData {
+  font-size: 20px;
+  height: 100%;
+  padding-top: 25px;
+  vertical-align: middle;
+}
+#recipeMetaData {
+  float: left;
+  padding-top: 70px;
+  vertical-align: middle;
+  line-height: 10px;
+  text-align: left;
+  padding-right: 25px;
+  padding-left: 50px;
+}
+
+#recipeIngredients {
+  border-left: solid 1px black;
+  float: left;
+  width: 430px;
+  font-size: 15px;
+  border-spacing: 0px;
+  display: table;
+  height: 100%;
+  text-align: left;
+  padding-left: 25px;
+  overflow-y: scroll;
+}
+
+#reqIngredients {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#reqIngredients ul li a:hover {  
+  cursor: pointer;
+}
+
+#recipeInstruction {
+  float: left;
+  text-align: left;
+  font-size: 17px;
+  padding-top: 30px;
+}
+
+#relatedRecipies,#resultsSection {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+#relatedRecipies div,#matchedRecipes {
+  height: 330px;
+  position: relative;
+  width: 275px;
+  float: left;
+  padding-left: 10px;
+  text-align: center;
+}
+
+#relatedRecipies div a, #matchedRecipes a{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 1px;
+  right: 1px;
+  top:1px;
+}
+
+#relatedRecipies div a:hover, #matchedRecipes a:hover{
+  box-shadow: 0 1px 5px 1px #0000A0;
+}
+
+#relatedRecipies div a div,#matchedRecipes a div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 1px;
+  right: 1px;
+  top:1px;
+}
+
+#relatedRecipies div a div img,#matchedRecipes a div img {
+  width: 95%;
+  height: 260px;
+}
+
+#relatedRecipies div a div p, #matchedRecipes a div img p{
+  width: 95%;
+  padding-right: 3px;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
