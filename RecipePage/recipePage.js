@@ -37,7 +37,7 @@ if(recipeRequest.readyState == 4 && recipeRequest.status == 200) {
 
   document.getElementById("recipeTitle").innerHTML = data.title;
   document.getElementById("recipeImg").src = data.image;
-  document.getElementById("calorieInfo").innerHTML = data.nutrition.nutrients[0].amount + data.nutrition.nutrients[0].title;
+  document.getElementById("calorieInfo").innerHTML = data.nutrition.nutrients[0].amount;
   document.getElementById("recipeTime").innerHTML = data.readyInMinutes + "minutes";
   document.getElementById("servingSize").innerHTML = data.servings;
   document.getElementById("recipeSource").innerHTML = data.sourceName;
