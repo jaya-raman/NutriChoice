@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta id="description" content="">
+    <meta id="author" content="">
+    <link rel="icon" href="bootstrap/favicon.ico">
+
+    <title>NutriChoice Recipe Planning Tool</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="starter-template.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="RecipePage/styles/recipePageStyle.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-inverse bg-inverse fixed-top">
+      <a class="navbar-brand" href="#">NutriChoice</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://market.mashape.com/spoonacular/recipe-food-nutrition/">API</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container">
+        <div id="searchHeader">
+            <ul class="nav nav-pills mb-3" id="searchOptions" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="byIngredientsTab" data-toggle="pill" href="#ingredients" role="tab" aria-controls="ingredients" aria-expanded="true">By Ingredients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="byNutrientsTab" data-toggle="pill" href="#nutrients" role="tab" aria-controls="nutrients" aria-expanded="true">By Nutrients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="randomTab" data-toggle="pill" href="#random" role="tab" aria-controls="random" aria-expanded="true">Random</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="ingredients" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <h3>Ingredients</h3>
+                    <div id="ingredientsForm" class="form-group">
+                        <textarea class="form-control input-lg" id="ingredientsText" placeholder="Seperate ingredients by a comma..."></textarea>
+                        <p>Do not include quantity/ measurements.</p>
+                    </div>
+
+                </div><!-- /div ingredientsTab -->
+
+                <div class="tab-pane fade" id="nutrients" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <h3>Nutrients</h3>
+                    <div id="nutrientForm" class="form-group row">
+                        <label class="col-lg-3 col-md-6 col-xs-12">Min Calories:<input type="number" class="form-control input-lg" id="minCalories" value="" min="0" placeholder="Min Calories"></label>
+                        <label class="col-lg-3 col-md-6 col-xs-12">Max Calories:<input type="number" class="form-control input-lg" id="maxCalories" value="" min="0" placeholder="Max Calories"></label>
+
+                        <label class="col-lg-3 col-md-6 col-xs-12">Min Fat:<input type="number" class="form-control input-lg" id="minFat" min="0" placeholder="Min Fat in grams"></label>
+                        <label class="col-lg-3 col-md-6 col-xs-12">Max Fat:<input type="number" class="form-control input-lg" id="maxFat" min="0" placeholder="Max Fat in grams"></label>
+
+                        <label class="col-lg-3 col-md-6 col-xs-12">Min Carbs:<input type="number" class="form-control input-lg" id="minCarbs" min="0" placeholder="Min Carbs in grams"></label>
+                        <label class="col-lg-3 col-md-6 col-xs-12">Max Carbs:<input type="number" class="form-control input-lg" id="maxCarbs" min="0" placeholder="Max Carbs in grams"></label>
+
+                        <label class="col-lg-3 col-md-6 col-xs-12">Min Protein:<input type="number" class="form-control input-lg" id="minProtein" min="0" placeholder="Min Protein in grams"></label>
+                        <label class="col-lg-3 col-md-6 col-xs-12">Max Protein:<input type="number" class="form-control input-lg" id="maxProtein" min="0" placeholder="Max Protein in grams"></label>
+                    </div>
+
+                </div><!-- /div nutrientsTab -->
+
+                <div class="tab-pane fade" id="random" role="tabpanel" aria-labelledby="pills-dropdown1-tab">
+                    <h3>Choose from some of the preferences below and we will find a recipe for you.</h3>
+
+                    <div class="form-group row" id="modTags">
+                    </div>
+                </div><!-- /div randomTab -->
+
+            </div>
+
+            <button class="btn btn-default" onClick="prepSearch()">Find Recipe</button>
+        </div><!-- /div searchHeader-->
+        <div id="searchResults">
+            <!-- <div id="searchNotice">
+            </div> -->
+            <br><h3>Search Results:</h3><br>
+            <div id="resultsSection">
+            <div id="matchedRecipes">
+              <a href="#" id="404126">
+                <div>
+                  <img padding="auto" src="https://spoonacular.com/recipeImages/Asparagus-with-Mushrooms-404126.jpg" alt="image">
+                  <p>Asparagus with Mushrooms</p>
+                </div>
+              </a>
+            </div>
+            <div id="matchedRecipes">
+              <a href="#" id="404126">
+                <div>
+                  <img padding="auto" src="https://spoonacular.com/recipeImages/gingery_sauted_watercress_and_shiitakes_recipe-13795.jpg" alt="image">
+                  <p>Asparagus with Mushrooms</p>
+               </div>
+             </a>
+           </div>
+           <div id="matchedRecipes">
+            <a href="#" id="404126">
+              <div>
+                <img padding="auto" src="https://spoonacular.com/recipeImages/gingery_sauted_watercress_and_shiitakes_recipe-13795.jpg" alt="image">
+                <p>Asparagus with Mushrooms</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ==================================================
+    Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="search.js"></script>
+
+  </body>
+</html>
