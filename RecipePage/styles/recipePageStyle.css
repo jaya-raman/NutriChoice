@@ -58,7 +58,7 @@ label {
   float: left;
   padding-top: 70px;
   vertical-align: middle;
-  line-height: 10px;
+  line-height: 12px;
   text-align: left;
   padding-right: 25px;
   padding-left: 50px;
@@ -82,7 +82,7 @@ label {
   vertical-align: middle;
 }
 
-#reqIngredients ul li a:hover {  
+#reqIngredients ul li a:hover {
   cursor: pointer;
 }
 
